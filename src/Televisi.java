@@ -1,11 +1,24 @@
 public class Televisi implements Kendali {
-    // keadaan nyala
-    public void on() {
-            System.out.println("Televisi sudah hidup");
-    }
+        // atribut class televisi
+        private int statustv = 0;
 
-    // keadaan mati
-    public void off() {
-            System.out.println("Televisi sudah mati");
-    }
+        // keadaan nyala
+        public void on() {
+                if (this.statustv == mati) {
+                        this.statustv = nyala;
+                        System.out.println("Televisi nyala");
+                } else {
+                        System.out.println("Televisi sudah nyala");
+                }
+        }
+
+        // keadaan mati
+        public void off() {
+                if (this.statustv == nyala) {
+                        this.statustv = mati;
+                        System.out.println("Televisi Mati");
+                } else {
+                        System.out.println("Televisi sudah mati");
+                }
+        }
 }
